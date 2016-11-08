@@ -101,15 +101,3 @@ nnoremap <leader><space> :%s/\s\+$//g<CR><ESC>
 :autocmd FileType python vnoremap <leader>cc :s/^#//g<CR>
 :autocmd FileType python nnoremap <leader>cc :s/^#//g<CR>
 
-
-" ================================================== 
-" EXTENSION 
-" ==================================================
-
-" --gvim colorscheme--
-if has('gui_running')
-    colorscheme harlequin
-    set lines=50 columns=120
-endif
-
-
