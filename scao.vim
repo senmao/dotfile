@@ -87,7 +87,7 @@ nnoremap <leader>i i <ESC>r
 nnoremap <leader>b oimport pdb; pdb.set_trace()<ESC>
 nnoremap <leader>e oimport traceback; traceback.print_exc()<ESC>
 
-" remove tailing space in current line
+" remove tailing space in all lines
 nnoremap <leader><space> :%s/\s\+$//g<CR><ESC>
 
 " python main part
