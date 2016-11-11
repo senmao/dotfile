@@ -55,8 +55,12 @@ map <c-h> <c-w>h
 " resize window
 nnoremap + <C-W>+
 nnoremap - <C-W>-
-nnoremap ( <C-W><
-nnoremap ) <C-W>>
+nnoremap <c-(> <C-W><
+nnoremap <c-)> <C-W>>
+
+" buffer switch
+nnoremap ( :bprev<CR>
+nnoremap ) :bnext<CR>
 
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y
