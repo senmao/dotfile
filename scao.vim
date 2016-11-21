@@ -70,8 +70,8 @@ noremap <leader>v "+p
 vnoremap <leader>p "_dP
 
 " run python
-nnoremap <C-F8> :! python %<CR>
-nnoremap <F8> :! python -m pdb %<CR>
+nnoremap <C-F11> :! python %<CR>
+nnoremap <F11> :! python -m pdb %<CR>
 
 " === leader key maps ===
 " switch aternative buffer
