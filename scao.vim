@@ -89,6 +89,7 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :tabo<CR>
 
 nnoremap <leader>i i <ESC>r
+nnoremap <leader>o o<ESC>
 
 " add break point
 nnoremap <leader>b oimport pdb; pdb.set_trace()<ESC>
