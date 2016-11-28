@@ -62,6 +62,9 @@ nnoremap <c-)> <C-W>>
 nnoremap ( :bprev<CR>
 nnoremap ) :bnext<CR>
 
+" paste option
+nnoremap <F4> :set paste! paste?<ESC>
+
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y
 noremap <leader>y "+yy
