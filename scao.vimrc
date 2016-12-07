@@ -17,15 +17,16 @@ Plugin 'gmarik/vundle'
 " We could also add repositories with a ".git" extension
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-surround'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'jlanzarotta/bufexplorer'
 "Plugin 'terryma/vim-multiple-cursors'
+
 Plugin 'Valloric/YouCompleteMe.git' " requires 7.4 or later
 Plugin 'scrooloose/syntastic.git'
-"Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/taglist.vim.git'
+"Plugin 'scrooloose/nerdcommenter'
 
 " To get plugins from Vim Scripts, you can reference the plugin
 " by name as it appears on the site
@@ -99,7 +100,7 @@ let g:ycm_key_invoke_completion = '<C-h>'
 " ==================================================
 " Load general setttings
 " ==================================================
-source /media/sf_U/codespace/github/dotfiles/scao.vim
+source /media/sf_U/codespace/github/dotfiles/scao_keymap.vim
 
 
 " ==================================================
