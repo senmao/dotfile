@@ -55,6 +55,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " --Taglist--
@@ -93,4 +94,5 @@ let g:ctrlp_custom_ignore = { 'dir':  '\.git$',
 
 " --youcompleteme--
 let g:ycm_key_invoke_completion = '<C-h>'
+nnoremap <C-G> :YcmCompleter GoTo<ESC>
 

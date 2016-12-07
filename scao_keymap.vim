@@ -1,8 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" This file includes general vim settings of scao 
+" This file includes general vim settings of scao
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-" ================================================== 
+" ==================================================
 " SETTINGS
 " ==================================================
 
@@ -36,13 +36,13 @@ set cc=81
 hi ColorColumn ctermbg=darkgrey
 
 
-" ================================================== 
+" ==================================================
 " MAPS
 " ==================================================
 
 " map jk to ESC for fast exit insert mode
 inoremap jk <ESC>
-vnoremap jk <ESC> 
+vnoremap jk <ESC>
 
 " window splits
 " map Ctrl+<movement> to Ctrl+w,<movement>
@@ -63,20 +63,17 @@ let mapleader = ","
 " buffer switch
 nnoremap ( :bprev<CR>
 nnoremap ) :bnext<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+nnoremap <leader>bb :b#<CR>
+nnoremap <leader>ls :ls<CR>
+let c = 1
+while c <= 99
+    execute "nnoremap <leader>" . c . " :" . c . "b<CR>"
+    let c += 1
+endwhile
 
 " new tab
 nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>q :tabo<CR>
+nnoremap <leader>to :tabo<CR>
 
 " paste option
 nnoremap <leader>cp :set paste! paste?<ESC>
@@ -89,21 +86,23 @@ noremap <leader>v "+p
 vnoremap <leader>p "_dP
 
 " run python
-nnoremap <C-F11> :! python %<CR>
-nnoremap <F11> :! python -m pdb %<CR>
+nnoremap <C-F8> :! python %<CR>
+nnoremap <F8> :! python -m pdb %<CR>
 
 " === leader key maps ===
 " map shortcut for save
 nnoremap <leader>s :w<CR>
+nnoremap <leader>ss :%s/\s\+$//g<CR>:w<CR>
+
 " windows path to linux path
 nnoremap <leader>/ :s/\\/\//g<CR>
+
+" remove tailing space in all lines
+nnoremap <leader>sb :%s/\s\+$//g<CR><ESC>
 
 nnoremap <leader>i i <ESC>r
 nnoremap <leader>o o<ESC>
 
-" add break point
-" remove tailing space in all lines
-nnoremap <leader><space> :%s/\s\+$//g<CR><ESC>
 
 " python main part
 :autocmd FileType python nnoremap <leader>m oif __name__ == "__main__":<CR>
