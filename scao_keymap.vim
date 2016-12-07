@@ -12,6 +12,7 @@ filetype on " try to detect filetypes
 set foldmethod=indent " fold the code block
 set foldlevel=99
 set autoindent
+set hidden
 
 set number " show line number
 set mouse=a " enable mouse
@@ -44,6 +45,9 @@ hi ColorColumn ctermbg=darkgrey
 inoremap jk <ESC>
 vnoremap jk <ESC>
 
+" set lead key
+let mapleader = ","
+
 " window splits
 " map Ctrl+<movement> to Ctrl+w,<movement>
 map <c-j> <c-w>j
@@ -54,25 +58,24 @@ map <c-h> <c-w>h
 " resize window
 nnoremap + <C-W>+
 nnoremap - <C-W>-
-nnoremap <c-(> <C-W><
-nnoremap <c-)> <C-W>>
+nnoremap <leader>+ <C-W>>
+nnoremap <leader>- <C-W><
 
-" set lead key
-let mapleader = ","
 
 " buffer switch
 nnoremap ( :bprev<CR>
 nnoremap ) :bnext<CR>
-nnoremap <leader>bb :b#<CR>
-nnoremap <leader>ls :ls<CR>
+nnoremap <C-m> :b#<CR>
+nnoremap <C-n> :ls<CR>
+
 let c = 1
 while c <= 99
-    execute "nnoremap <leader>" . c . " :" . c . "b<CR>"
+    execute "nnoremap <leader>" . c . "b :" . c . "b<CR>"
     let c += 1
 endwhile
 
 " new tab
-nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>to :tabo<CR>
 
 " paste option
@@ -80,8 +83,8 @@ nnoremap <leader>cp :set paste! paste?<ESC>
 
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y
-noremap <leader>y "+yy
-noremap <leader>v "+p
+nnoremap <leader>y "+yy
+nnoremap <leader>v "+p
 " delete and paste, without putting deleted text in default register
 vnoremap <leader>p "_dP
 
@@ -92,13 +95,13 @@ nnoremap <F8> :! python -m pdb %<CR>
 " === leader key maps ===
 " map shortcut for save
 nnoremap <leader>s :w<CR>
-nnoremap <leader>ss :%s/\s\+$//g<CR>:w<CR>
 
 " windows path to linux path
 nnoremap <leader>/ :s/\\/\//g<CR>
 
 " remove tailing space in all lines
-nnoremap <leader>sb :%s/\s\+$//g<CR><ESC>
+nnoremap <leader>ft :%s/\s\+$//g<CR><ESC>
+nnoremap <leader>fs :%s/\s\+$//g<CR>:w<CR>
 
 nnoremap <leader>i i <ESC>r
 nnoremap <leader>o o<ESC>
@@ -106,8 +109,8 @@ nnoremap <leader>o o<ESC>
 
 " python main part
 :autocmd FileType python nnoremap <leader>m oif __name__ == "__main__":<CR>
-:autocmd FileType python nnoremap <leader>b oimport pdb; pdb.set_trace()<ESC>
-:autocmd FileType python nnoremap <leader>e oimport traceback; traceback.print_exc()<ESC>
+:autocmd FileType python nnoremap <leader>ab oimport pdb; pdb.set_trace()<ESC>
+:autocmd FileType python nnoremap <leader>ae oimport traceback; traceback.print_exc()<ESC>
 " python comment and uncomment shortcut
 :autocmd FileType python vnoremap <leader>c :s/^/#/g<CR>
 :autocmd FileType python nnoremap <leader>c :s/^/#/g<CR>
