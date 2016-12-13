@@ -67,6 +67,7 @@ nnoremap ( :bprev<CR>
 nnoremap ) :bnext<CR>
 nnoremap <C-m> :b#<CR>
 nnoremap <C-n> :ls<CR>
+nnoremap <leader>q :1,$bd<CR>
 
 let c = 1
 while c <= 99

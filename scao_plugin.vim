@@ -93,6 +93,6 @@ let g:ctrlp_custom_ignore = { 'dir':  '\.git$',
             \ 'file': '\.pyc$' }
 
 " --youcompleteme--
-let g:ycm_key_invoke_completion = '<C-h>'
-nnoremap <C-G> :YcmCompleter GoTo<ESC>
+let g:ycm_key_invoke_completion = '<leader>h'
+nnoremap <leader>g :YcmCompleter GoTo<ESC>
 
