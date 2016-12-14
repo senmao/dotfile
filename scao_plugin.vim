@@ -25,7 +25,8 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'Valloric/YouCompleteMe.git' " requires 7.4 or later
 Plugin 'scrooloose/syntastic.git'
-Plugin 'vim-scripts/taglist.vim.git'
+"Plugin 'vim-scripts/taglist.vim.git'
+Plugin 'majutsushi/tagbar.git'
 "Plugin 'scrooloose/nerdcommenter'
 
 " To get plugins from Vim Scripts, you can reference the plugin
@@ -68,6 +69,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 """let Tlist_Sort_Type = "name"
 "command Tlist1 TlistOpen | exe "resize".(&lines/2) | wincmd k | wincmd H | exe "vertical resize".(&columns-30)
 """nnoremap <C-F6> :exe "let Tlist_Use_Horiz_Window=1"<CR>:TlistOpen<CR>:exe "resize".(&lines/2)<CR>:wincmd k<CR>:wincmd H<CR>:exe "vertical resize".(&columns-30)<CR>
+
+" --TagBar--
+nmap <F6>> :TagbarToggle<CR>
 
 
 "--Syntastic--

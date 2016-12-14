@@ -67,7 +67,8 @@ nnoremap ( :bprev<CR>
 nnoremap ) :bnext<CR>
 nnoremap <C-m> :b#<CR>
 nnoremap <C-n> :ls<CR>
-nnoremap <leader>q :1,$bd<CR>
+nnoremap <leader>bo :1,$bd<CR>
+nnoremap <leader>q :bd<CR>
 
 let c = 1
 while c <= 99
@@ -109,7 +110,7 @@ nnoremap <leader>o o<ESC>
 
 
 " python main part
-:autocmd FileType python nnoremap <leader>m oif __name__ == "__main__":<CR>
+:autocmd FileType python nnoremap <leader>am oif __name__ == "__main__":<CR>
 :autocmd FileType python nnoremap <leader>ab oimport pdb; pdb.set_trace()<ESC>
 :autocmd FileType python nnoremap <leader>ae oimport traceback; traceback.print_exc()<ESC>
 " python comment and uncomment shortcut
