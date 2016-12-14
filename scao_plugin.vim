@@ -38,6 +38,7 @@ filetype plugin indent on
 " ================================================== 
 " PLUGINS Settings
 " ==================================================
+let mapleader = ","
 
 " let NERDTreeWinPos="right"
 "let NERDTreeHijackNetrw=1
