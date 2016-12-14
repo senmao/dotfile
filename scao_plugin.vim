@@ -71,7 +71,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 """nnoremap <C-F6> :exe "let Tlist_Use_Horiz_Window=1"<CR>:TlistOpen<CR>:exe "resize".(&lines/2)<CR>:wincmd k<CR>:wincmd H<CR>:exe "vertical resize".(&columns-30)<CR>
 
 " --TagBar--
-nmap <F6>> :TagbarToggle<CR>
+nmap <F6> :TagbarToggle<CR>
 
 
 "--Syntastic--
