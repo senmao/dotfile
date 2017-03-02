@@ -1,10 +1,6 @@
 # ---------------------------------
 # Alias
 # ---------------------------------
-alias gits="git status"
-alias gita="git add"
-alias gitd="git diff"
-alias gitc="git diff"
 
 
 

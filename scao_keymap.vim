@@ -81,7 +81,7 @@ nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>to :tabo<CR>
 
 " paste option
-nnoremap <leader>cp :set paste! paste?<ESC>
+set pastetoggle=<F3>
 
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y
@@ -102,8 +102,7 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>/ :s/\\/\//g<CR>
 
 " remove tailing space in all lines
-nnoremap <leader>ft :%s/\s\+$//g<CR><ESC>
-nnoremap <leader>fs :%s/\s\+$//g<CR>:w<CR>
+nnoremap <leader><space> :%s/\s\+$//g<CR><ESC>
 
 nnoremap <leader>i i <ESC>r
 nnoremap <leader>o o<ESC>

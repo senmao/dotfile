@@ -86,10 +86,14 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_check_on_wq = 0
 nnoremap <leader>q :SyntasticCheck<CR>
 " ignore some pep8 errors or warnings
-" E501: the line exceed 80 characters
-" W391: warning of blank line in end of file
+" E225: missing whitespace around operator
+" E226: missing whitespace around arithmetic operator
+" E302: expected 2 blank lines, found 1
 " E303: too many blank line before
-let g:syntastic_python_flake8_args='--ignore=E501,W391,E303'
+" W391: warning of blank line in end of file
+" E501: the line exceed 80 characters
+"
+let g:syntastic_python_flake8_args='--ignore=E225,E226,E302,E303,W391,E501'
 
 
 " --ctrlp--
