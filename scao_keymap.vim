@@ -56,10 +56,10 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 " resize window
-nnoremap + <C-W>+
-nnoremap - <C-W>-
-nnoremap <leader>+ <C-W>>
-nnoremap <leader>- <C-W><
+nnoremap <leader>+ <C-W>+
+nnoremap <leader>- <C-W>-
+nnoremap + <C-W>>
+nnoremap - <C-W><
 
 
 " buffer switch
