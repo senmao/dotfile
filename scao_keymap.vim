@@ -48,12 +48,6 @@ vnoremap jk <ESC>
 " set lead key
 let mapleader = ","
 
-" window splits
-" map Ctrl+<movement> to Ctrl+w,<movement>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 
 " resize window
 nnoremap <leader>+ <C-W>+
@@ -63,8 +57,8 @@ nnoremap - <C-W><
 
 
 " buffer switch
-nnoremap ( :bprev<CR>
-nnoremap ) :bnext<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
 nnoremap <C-m> :b#<CR>
 nnoremap <C-n> :ls<CR>
 nnoremap <leader>bo :1,$bd<CR>
