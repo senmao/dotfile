@@ -99,7 +99,7 @@ let g:syntastic_python_flake8_args='--ignore=E225,E226,E302,E303,W391,E501'
 " --ctrlp--
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = { 'dir':  '\.git$',
-            \ 'file': '\.pyc$' }
+            \ 'file': '\v\.(pyc|pdf)$' }
 
 " --youcompleteme--
 let g:ycm_key_invoke_completion = '<leader>h'
