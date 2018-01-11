@@ -18,6 +18,7 @@ alias ..4='cd ../../../..'
 
 alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
+alias pypath="echo $PYTHONPATH"
 
 
 
