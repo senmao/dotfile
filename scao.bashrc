@@ -25,7 +25,7 @@ alias pxml='xmllint --format'
 # ---------------------------------
 # Funcitons
 # ---------------------------------
-fpath() { readlink -f "$@"|xcopy; }
+fpath() { readlink -f "$@"| tee >(xcopy) >&1; }
 fpath2() { readlink -f "$@"; }
 
 cdl() { cd "$@" && ls; }
