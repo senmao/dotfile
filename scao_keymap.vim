@@ -22,6 +22,7 @@ set expandtab
 set softtabstop=4
 
 set backspace=indent,eol,start
+set nohlsearch
 
 "au FileType python set textwidth=80 formatoptions+=t
 
@@ -70,12 +71,14 @@ while c <= 99
     let c += 1
 endwhile
 
+" F keys
+set pastetoggle=<F3>
+nnoremap <F4> :set hlsearch!<CR>
+
+
 " new tab
 nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>to :tabo<CR>
-
-" paste option
-set pastetoggle=<F3>
 
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y
@@ -83,10 +86,6 @@ nnoremap <leader>y "+yy
 nnoremap <leader>v "+p
 " delete and paste, without putting deleted text in default register
 vnoremap <leader>p "_dP
-
-" run python
-nnoremap <C-F8> :! python %<CR>
-nnoremap <F8> :! python -m pdb %<CR>
 
 " === leader key maps ===
 " map shortcut for save

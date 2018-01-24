@@ -19,6 +19,9 @@ alias ..4='cd ../../../..'
 alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
 
+# Git
+alias glog='git log --pretty=format:"%h %s" --graph'
+alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
 
 
 
