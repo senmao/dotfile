@@ -15,9 +15,11 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
 
 alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
+alias pypath="echo $PYTHONPATH"
 
 # Git
 alias glog='git log --pretty=format:"%h %s" --graph'
@@ -28,7 +30,7 @@ alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
 # ---------------------------------
 # Funcitons
 # ---------------------------------
-fpath() { readlink -f "$@"|xcopy; }
+fpath() { readlink -f "$@"| tee >(xcopy) >&1; }
 fpath2() { readlink -f "$@"; }
 
 cdl() { cd "$@" && ls; }

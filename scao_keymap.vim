@@ -51,10 +51,10 @@ let mapleader = ","
 
 
 " resize window
-nnoremap <leader>+ <C-W>+
-nnoremap <leader>- <C-W>-
-nnoremap + <C-W>>
-nnoremap - <C-W><
+nnoremap + <C-W>+
+nnoremap - <C-W>-
+nnoremap <leader>+ <C-W>>
+nnoremap <leader>- <C-W><
 
 
 " buffer switch
@@ -64,6 +64,8 @@ nnoremap <C-m> :b#<CR>
 nnoremap <C-n> :ls<CR>
 nnoremap <leader>bo :1,$bd<CR>
 nnoremap <leader>q :bd<CR>
+
+nnoremap <leader>r :redraw!<CR>
 
 let c = 1
 while c <= 99
@@ -110,4 +112,12 @@ nnoremap <leader>o o<ESC>
 :autocmd FileType python nnoremap <leader>c :s/^/#/g<CR>
 :autocmd FileType python vnoremap <leader>cc :s/^#//g<CR>
 :autocmd FileType python nnoremap <leader>cc :s/^#//g<CR>
+
+:autocmd FileType python nnoremap <C-F8> :! python %<CR>
+
+
+" latex part
+"nnoremap <leader>tc :!pdflatex -output-directory  ./_output '%:p'<CR>
+nnoremap <leader>te $a}<ESC>0i\begin{<ESC>yyp0lcwend<ESC>O
+
 
