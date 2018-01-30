@@ -22,6 +22,7 @@ set expandtab
 set softtabstop=4
 
 set backspace=indent,eol,start
+set nohlsearch
 
 "au FileType python set textwidth=80 formatoptions+=t
 
@@ -72,9 +73,14 @@ while c <= 99
     let c += 1
 endwhile
 
-
-" paste option
+" F keys
 set pastetoggle=<F3>
+nnoremap <F4> :set hlsearch!<CR>
+
+
+" new tab
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>to :tabo<CR>
 
 " copy, cut and past with system clipboard
 vnoremap <leader>y "+y

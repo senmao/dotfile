@@ -21,9 +21,11 @@ alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
 alias pypath='echo $PYTHONPATH'
 alias addpypath='export PYTHONPATH=$PYTHONPATH'
-
 addpypath() { export PYTHONPATH=$@:$PYTHONPATH;pypath; }
 
+# Git
+alias glog='git log --pretty=format:"%h %s" --graph'
+alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
 
 
 # ---------------------------------
