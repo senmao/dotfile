@@ -19,8 +19,10 @@ alias ..5='cd ../../../../..'
 
 alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
-alias pypath="echo $PYTHONPATH"
+alias pypath='echo $PYTHONPATH'
+alias addpypath='export PYTHONPATH=$PYTHONPATH'
 
+addpypath() { export PYTHONPATH=$@:$PYTHONPATH;pypath; }
 
 
 
