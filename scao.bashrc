@@ -19,6 +19,7 @@ alias ..5='cd ../../../../..'
 
 alias mkdir='mkdir -p -v'
 alias pxml='xmllint --format'
+alias pjson="python -m json.tool"
 alias pypath='echo $PYTHONPATH'
 
 addpypath() { export PYTHONPATH="$@":$PYTHONPATH;pypath; }
@@ -26,6 +27,12 @@ addpypath() { export PYTHONPATH="$@":$PYTHONPATH;pypath; }
 # Git
 alias glog='git log --pretty=format:"%h %s" --graph'
 alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+
+
+alias latest="find -type f -print0 | xargs -0 stat --format '%Y :%y %n' | sort -n | cut -d: -f2-"
+alias ddu="du -sch .[!.]* * |sort -hr"
+alias vimf="vim -u NONE"
+
 
 
 # ---------------------------------
