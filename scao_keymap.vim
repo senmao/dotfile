@@ -10,7 +10,7 @@ syntax on
 filetype on " try to detect filetypes
 
 set foldmethod=indent " fold the code block
-set foldlevel=99
+set foldlevel=1
 set autoindent
 set hidden
 
@@ -52,18 +52,19 @@ let mapleader = ","
 
 " resize window
 nnoremap + <C-W>+
-nnoremap - <C-W>-
+nnoremap <leader>- <C-W>-
 nnoremap <leader>+ <C-W>>
-nnoremap <leader>- <C-W><
+nnoremap - <C-W><
 
 
 " buffer switch
 nnoremap <C-h> :bprev<CR>
 nnoremap <C-l> :bnext<CR>
-nnoremap <C-m> :b#<CR>
-nnoremap <C-n> :ls<CR>
-nnoremap <leader>bo :1,$bd<CR>
-nnoremap <leader>q :bd<CR>
+nnoremap <C-n> :b#<CR>
+" nnoremap <C-m> :ls<CR>
+" nnoremap <leader>bo :1,$bd<CR>
+" nnoremap <leader>q :bd<CR>
+:command Bdo %bd|e#|bd#
 
 nnoremap <leader>r :redraw!<CR>
 
@@ -83,11 +84,10 @@ nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>to :tabo<CR>
 
 " copy, cut and past with system clipboard
-vnoremap <leader>y "+y
-nnoremap <leader>y "+yy
-nnoremap <leader>v "+p
-" delete and paste, without putting deleted text in default register
-vnoremap <leader>p "_dP
+vnoremap <leader>y "*y
+nnoremap <leader>y "*yy
+nnoremap <leader>p "*p
+noremap <leader>d "_d
 
 " === leader key maps ===
 " map shortcut for save
@@ -101,6 +101,9 @@ nnoremap <leader><space> :%s/\s\+$//g<CR><ESC>
 
 nnoremap <leader>i i <ESC>r
 nnoremap <leader>o o<ESC>
+
+"json
+:autocmd FileType json command Jformat %!python -m json.tool
 
 
 " python main part
@@ -120,4 +123,8 @@ nnoremap <leader>o o<ESC>
 "nnoremap <leader>tc :!pdflatex -output-directory  ./_output '%:p'<CR>
 nnoremap <leader>te $a}<ESC>0i\begin{<ESC>yyp0lcwend<ESC>O
 
+" ==Color scheme==
+"" :highlight LineNr ctermfg=grey
+:highlight Folded ctermbg=Black ctermfg=Grey
 
+" change directory

@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'alvan/vim-closetag'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'jlanzarotta/bufexplorer'
 "Plugin 'terryma/vim-multiple-cursors'
@@ -28,6 +29,8 @@ Plugin 'scrooloose/syntastic.git'
 "Plugin 'vim-scripts/taglist.vim.git'
 Plugin 'majutsushi/tagbar.git'
 "Plugin 'scrooloose/nerdcommenter'
+Plugin 'SirVer/ultisnips.git'
+"" good snippets reop: Plugin 'honza/vim-snippets'
 
 " To get plugins from Vim Scripts, you can reference the plugin
 " by name as it appears on the site
@@ -73,9 +76,17 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " --TagBar--
 nmap <F6> :TagbarToggle<CR>
 
+" closeTag
+let g:closetag_filenames = '*tex,*xml,*.html,*.xhtml'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_shortcut = '>'
+"let g:closetag_close_shortcut = '<leader>>'
+
 
 "--Syntastic--
-highlight SpellBad term=reverse ctermbg=DarkGray ctermfg=White cterm=undercurl
+"""highlight SpellBad term=reverse ctermbg=DarkGray ctermfg=White cterm=undercurl
+highlight clear SpellBad
+highlight SpellBad cterm=underline
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -104,4 +115,14 @@ let g:ctrlp_custom_ignore = { 'dir':  '\.git$',
 " --youcompleteme--
 let g:ycm_key_invoke_completion = '<leader>h'
 nnoremap <leader>g :YcmCompleter GoTo<ESC>
+let g:ycm_global_ycm_extra_conf = '/home/scao/.vim/ycm_extra_conf.py'
+
+
+" -- ultisnips --
+let g:UltiSnipsExpandTrigger="<c-i>"
+" use tab to next and shift+tab to previous
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+" vertical layout
+let g:UltiSnipsEditSplit="vertical"
 
