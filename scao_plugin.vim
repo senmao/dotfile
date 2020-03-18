@@ -109,6 +109,9 @@ let g:syntastic_python_flake8_args='--ignore=E225,E226,E302,E303,W391,E501'
 
 " --ctrlp--
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_files=0
+let g:ctrlp_match_window = 'min:4,max:20,results:100'
+"let g:ctrlp_max_depth=100
 let g:ctrlp_custom_ignore = { 'dir':  '\.git$',
             \ 'file': '\v\.(pyc|pdf)$' }
 

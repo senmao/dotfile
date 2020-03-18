@@ -69,6 +69,7 @@ alias cpf='cp -ar $(cat ${CLIPFCACHE})'
 alias mvf='mv -n $(cat ${CLIPFCACHE})'
 
 
+asm() { as --32 -o $1.o $1; ld -m elf_i386 -dynamic-linker /lib/ld-linux.so.2 -o ${1/.s/} -lc $1.o; rm $1.o;}
 
 # ---------------------------------
 # Funcitons
