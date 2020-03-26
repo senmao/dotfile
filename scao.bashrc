@@ -14,7 +14,7 @@ fi
 # ---------------------------------
 # term color (TMUX)
 # ---------------------------------
-if [[ -v TMUX ]]; then
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
     export TERM=screen-256color 
 fi
 
